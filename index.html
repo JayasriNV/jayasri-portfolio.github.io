@@ -1,217 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jayasri NV | Data Science Resume</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jayasri NV | Data Science Portfolio</title>
 
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f6f9;
-            color: #1e293b;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+<style>
+:root {
+    --primary: #1f3c88;
+    --secondary: #0f172a;
+    --accent: #3b82f6;
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+}
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: #ffffff;
-            padding: 40px;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        h1 {
-            margin-bottom: 5px;
-            font-size: 2.2rem;
-        }
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
 
-        .contact {
-            color: #475569;
-            margin-bottom: 20px;
-        }
+/* NAVBAR */
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
 
-        hr {
-            border: none;
-            border-top: 2px solid #e5e7eb;
-            margin: 25px 0;
-        }
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        h2 {
-            font-size: 1.3rem;
-            color: #1f3c88;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+}
 
-        ul {
-            padding-left: 20px;
-        }
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
 
-        li {
-            margin-bottom: 8px;
-        }
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+}
 
-        .section {
-            margin-bottom: 25px;
-        }
+/* LAYOUT */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 10px 18px;
-            background: #1f3c88;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, var(--primary), #274690);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 18px;
+    margin-bottom: 3rem;
+}
 
-        .btn:hover {
-            background: #162c63;
-        }
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
 
-        .job-title {
-            font-weight: bold;
-        }
+.hero p {
+    font-size: 1.2rem;
+    max-width: 900px;
+}
 
-        .tools {
-            font-style: italic;
-            color: #475569;
-        }
+.hero-meta {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
 
-        footer {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #64748b;
-            margin-top: 40px;
-        }
-    </style>
+.hero-actions {
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 1rem;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--primary);
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+}
+
+/* SECTIONS */
+section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+/* CARDS */
+.card {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+}
+
+/* LIST */
+ul {
+    padding-left: 1.2rem;
+}
+
+li {
+    margin-bottom: 0.6rem;
+}
+
+/* TAG TEXT */
+.muted {
+    color: var(--muted);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 2rem 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+</style>
 </head>
 
 <body>
 
+<header>
+<nav>
+    <div class="logo">JAYASRI NV</div>
+    <ul class="nav-links">
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+    </ul>
+</nav>
+</header>
+
 <div class="container">
 
-    <h1>JAYASRI NV</h1>
-    <div class="contact">
-        Chennai | jayasrinavaneethan2004@gmail.com | 7305096962
+<!-- HERO -->
+<div class="hero">
+    <h1>Jayasri NV</h1>
+    <p>Data Science Graduate | Machine Learning & Applied Analytics</p>
+    <div class="hero-meta">
+        Chennai · jayasrinavaneethan2004@gmail.com · 7305096962
     </div>
-
-    <a href="JAYASRI_NV_Resume.pdf" class="btn" download>
-        Download CV (PDF)
-    </a>
-
-    <hr>
-
-    <div class="section">
-        <h2>Professional Summary</h2>
-        <p>
-            Detail-oriented Data Science student with a strong foundation in data analysis,
-            machine learning, and statistical reasoning. Passionate about applying data-driven
-            approaches to solve real-world problems and support informed decision-making.
-            Possesses a research-oriented mindset, adaptability to emerging technologies, and
-            the ability to work effectively in collaborative environments, with a continuous
-            focus on learning and professional growth.
-        </p>
+    <div class="hero-actions">
+        <a href="JAYASRI_NV_Resume.pdf" class="btn btn-primary" download>
+            Download CV
+        </a>
+        <a href="#projects" class="btn btn-outline">
+            View Projects
+        </a>
     </div>
-
-    <div class="section">
-        <h2>Skills Summary</h2>
-        <p><strong>Languages:</strong> Python, SQL</p>
-        <p><strong>Databases:</strong> MongoDB, PostgreSQL</p>
-        <p><strong>AI Techniques:</strong> Machine Learning Algorithms, Feature Selection,
-            Hyperparameter Optimization, Malware Detection, Exploratory Data Analysis (EDA),
-            Geospatial Analysis, Reinforcement Learning</p>
-        <p><strong>Soft Skills:</strong> Leadership, Adaptability, Crisis Management,
-            Receptiveness to Feedback, Attention to Detail</p>
-    </div>
-
-    <div class="section">
-        <h2>Experience</h2>
-        <p class="job-title">
-            Product Development Intern, Unifo Pvt. Ltd. – Chennai
-            <br>April 2025 – July 2025
-        </p>
-        <ul>
-            <li>Designed and conducted comparative infrastructure experiments focusing on training vs. inference performance for AI/ML workloads.</li>
-            <li>Evaluated and benchmarked performance across CPUs, GPUs, and TPUs.</li>
-            <li>Analyzed cloud versus on-premise deployment trade-offs for LLM workloads.</li>
-            <li>Collaborated with AI, ML, and Ops teams to recommend optimal infrastructure configurations.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Projects</h2>
-
-        <p class="job-title">Boutique Management Database cum Website</p>
-        <ul>
-            <li>Developed a virtual boutique management system with integrated database.</li>
-            <li>Implemented backend database operations for real-time data handling.</li>
-            <li class="tools">Tools/Techniques Used: SQL, Python, MongoDB, PostgreSQL</li>
-        </ul>
-
-        <p class="job-title">Research on Malware Detection System</p>
-        <ul>
-            <li>Conducted analytical study on Android malware detection using ML techniques.</li>
-            <li>Applied feature selection and hyperparameter optimization.</li>
-            <li class="tools">Tools/Techniques Used: Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</li>
-        </ul>
-
-        <p class="job-title">Exploratory Data Analysis & Geospatial Visualization on Zomato Dataset</p>
-        <ul>
-            <li>Analyzed restaurant distribution and customer preferences.</li>
-            <li>Created geospatial visualizations to identify hotspots.</li>
-            <li class="tools">Tools/Techniques Used: Python, Pandas, GeoPandas, Matplotlib, Seaborn, Folium</li>
-        </ul>
-
-        <p class="job-title">Self-Driven Car for Indian Roads Using Reinforcement Learning</p>
-        <ul>
-            <li>Designed an RL-based autonomous driving system.</li>
-            <li>Trained an agent using reward-based learning.</li>
-            <li class="tools">Tools/Techniques Used: Python, PPO, CARLA Simulator</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Papers (Yet to be Published)</h2>
-        <ul>
-            <li>Sentiment Analysis in FinBERT for Stock Market Text Data using Global News Data</li>
-            <li>Enhanced Stock Prediction Using Hybrid LSTM-CNN Algorithm and Explainable AI with YFinance Data</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Education</h2>
-        <p>
-            <strong>Amrita Vishwa Vidyapeetham, Coimbatore</strong><br>
-            5-Year Integrated M.Sc. in Data Science (2022 – Present)<br>
-            CGPA: 7.69
-        </p>
-        <p>
-            <strong>Coursework:</strong> Data Analysis and Statistics, Machine Learning,
-            Data Structures and Algorithms, Database Management Systems,
-            Data Visualization, Reinforcement Learning
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>Extra Curricular Activities</h2>
-        <ul>
-            <li>Dancer in Natyasudha, Amrita Vishwa Vidyapeetham</li>
-            <li>Asia Book of Records holder in Bharathanatyam</li>
-            <li>Guinness World Record holder in Bharathanatyam</li>
-            <li>A+ Grade in Bharathanatyam Grade-Level 3 Examination</li>
-            <li>3rd Place – Group Dance, Amritotsavam 2023</li>
-        </ul>
-    </div>
-
-    <footer>
-        © 2025 Jayasri NV
-    </footer>
-
 </div>
 
+<!-- SUMMARY -->
+<section id="summary">
+<h2 class="section-title">Professional Summary</h2>
+<div class="card">
+    <p>
+        Detail-oriented Data Science student with a strong foundation in data analysis,
+        machine learning, and statistical reasoning. Passionate about applying data-driven
+        approaches to solve real-world problems and support informed decision-making.
+        Possesses a research-oriented mindset, adaptability to emerging technologies,
+        and the ability to work effectively in collaborative environments, with a continuous
+        focus on learning and professional growth.
+    </p>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2 class="section-title">Skills Summary</h2>
+<div class="card">
+    <p><strong>Languages:</strong> Python, SQL</p>
+    <p><strong>Databases:</strong> MongoDB, PostgreSQL</p>
+    <p><strong>AI Techniques:</strong> Machine Learning Algorithms, Feature Selection,
+        Hyperparameter Optimization, Malware Detection, Exploratory Data Analysis (EDA),
+        Geospatial Analysis, Reinforcement Learning</p>
+    <p><strong>Soft Skills:</strong> Leadership, Adaptability, Crisis Management,
+        Receptiveness to Feedback, Attention to Detail</p>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<h2 class="section-title">Experience</h2>
+<div class="card">
+    <strong>Product Development Intern – Unifo Pvt. Ltd., Chennai</strong><br>
+    <span class="muted">April 2025 – July 2025</span>
+    <ul>
+        <li>Designed and conducted comparative infrastructure experiments for AI/ML workloads.</li>
+        <li>Benchmarked performance across CPUs, GPUs, and TPUs.</li>
+        <li>Analyzed cloud vs on-premise deployment for LLM workloads.</li>
+        <li>Collaborated with AI, ML, and Ops teams on infrastructure recommendations.</li>
+    </ul>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+
+<div class="card">
+    <strong>Boutique Management Database cum Website</strong>
+    <ul>
+        <li>Developed a virtual boutique management system with integrated database.</li>
+        <li>Implemented backend operations for real-time data handling.</li>
+        <li class="muted">Tools: SQL, Python, MongoDB, PostgreSQL</li>
+    </ul>
+</div>
+
+<div class="card">
+    <strong>Research on Malware Detection System</strong>
+    <ul>
+        <li>Analytical study on Android malware detection using ML classification.</li>
+        <li>Applied feature selection and hyperparameter optimization.</li>
+        <li class="muted">Tools: Python, Scikit-learn, Pandas, NumPy</li>
+    </ul>
+</div>
+
+<div class="card">
+    <strong>EDA & Geospatial Visualization on Zomato Dataset</strong>
+    <ul>
+        <li>Studied restaurant distribution and customer trends.</li>
+        <li>Created geospatial hotspot visualizations.</li>
+        <li class="muted">Tools: Pandas, GeoPandas, Folium</li>
+    </ul>
+</div>
+
+<div class="card">
+    <strong>Self-Driven Car for Indian Roads (Reinforcement Learning)</strong>
+    <ul>
+        <li>Designed RL-based autonomous driving system.</li>
+        <li>Trained agent using reward-based learning.</li>
+        <li class="muted">Tools: Python, PPO, CARLA Simulator</li>
+    </ul>
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<h2 class="section-title">Education</h2>
+<div class="card">
+    <strong>Amrita Vishwa Vidyapeetham, Coimbatore</strong><br>
+    5-Year Integrated M.Sc. in Data Science (2022 – Present)<br>
+    CGPA: 7.69
+    <p class="muted">
+        Coursework: Data Analysis and Statistics, Machine Learning,
+        Data Structures and Algorithms, DBMS, Data Visualization,
+        Reinforcement Learning
+    </p>
+</div>
+</section>
+
+<footer>
+    © 2025 Jayasri NV
+</footer>
+
+</div>
 </body>
 </html>
